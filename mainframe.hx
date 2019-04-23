@@ -11,35 +11,49 @@ static public function main():Void {
 	var qu2nt:String = './featuring.dt';
 	var qu4nt:String = './ohio.note';
 
-	var aeque:Array<String> = ['./llvm♡', 'ssh://github.com/llvm/llvm-project.git'];
-	var terrae:Array<String> = ['./flex♡', 'ssh://github.com/westes/flex.git'];	
-
+	var preter:Array<String> = ['ssh-keyscan', '>>', '~/.ssh/known_hosts'];
+	var aeque:Array<String> = ['./llvm', 'https://github.com/llvm/llvm-project.git'];
+	var terrae:Array<String> = ['./flex', 'https://github.com/westes/flex.git'];	
+	var plaentrea:Array<String> =['./emcc', 'https://github.com/emscripten-core/emsdk.git'];
 	var kyno = '';
-  	var chron = gitcoal(qu1nt, kyno);
-	var strud = gitcoal(qu2nt, kyno);
 
+  	var chron = gitcoal(qu1nt, kyno);
+	yliy = preact(aeque[1], preter, yliy);
 	yliy = act_0(aeque[0], aeque[1], yliy, qu4nt);
-	yliy = act_1(terrae[0], terrae[1], yliy, qu4nt);
+	yliy = preact(terrae[1], preter, yliy);
+	//yliy = act_0(terrae[0], terrae[1], yliy, qu4nt);
+	yliy = preact(plaentrea[1], preter, yliy);
+
+	var strud = gitcoal(qu2nt, kyno);
+	//yliy = act_1(plaentrea[0], plaentrea[1], yliy, qu4nt);
 	yliy = act_2(chron, strud, yliy, qu4nt);
 
 }
+			static public function preact(lila:String, maya:Array<String>, ?eth:Int){
+				var Miu:Array<String> = [lila, maya[1], maya[2]];
+				clientele( maya[0], Miu, 0 );
+				return eth;
+			}
 
 			static public function act_0(ground:String, pillar:String, ?upper:Int, ?lwhr:String){
    				temporas(upper, lwhr);
-   				var command_n0 = ['install', 'hxcpp'];
-				var command_n00 = ['config', 'http.postBuffer', '1524288000'];
-   				var command_n01 = ['',  'init'];
-   				var command_n2 = ['clone', pillar, ground];
-   				var command_n3 = ["--git-dir="+ground+"/.git", "--work-tree="+ground,  'checkout', 'master'];
-   				var command_n4 = ["--git-dir="+ground+"/.git", "--work-tree="+ground,  'pull', 'origin', 'master'];
+   				var command_n = [	[ 'install', 'hxcpp'],
+									[ 'config', 'http.postBuffer', '1524288000'],
+									[ '',  'init'],
+   									[ 'clone', pillar, ground],
+   									[ "--git-dir="+ground+"/.git", "--work-tree="+ground,  'checkout', 'master'],
+   									[ "--git-dir="+ground+"/.git", "--work-tree="+ground,  'pull', 'origin', 'master'],
+   									[ "--git-dir="+ground+"/.git", "--work-tree="+ground, "reset", "--hard"] ];
    				
-   				if (!sys.FileSystem.exists(ground)) {
+   				if (!sys.FileSystem.exists( ground + "/.git" )) {
    					trace('Mark 1');
-			   		upper = clientele('git', command_n2, upper);
+			   		upper = clientele('git', command_n[3], upper);
+   				} else {
+   					upper = clientele('git', command_n[6], upper);
    				};
-				upper = clientele('git', command_n3, upper);
-			   	upper = clientele('git', command_n4, upper);
-			   return upper;
+				upper = clientele('git', command_n[4], upper);
+			   	upper = clientele('git', command_n[5], upper);
+			   	return upper;
    			}
 
    			static public function act_1(bush:String, star:String, ?lower:Int, ?supr:String){
@@ -76,7 +90,7 @@ static public function main():Void {
 				trace('Warning: Mark 3');
 		   		var command_m5 = ['checkout', '-b', 'feature-$dome'];
 			  	var command_m4a = ['add', '*'];
-			  	var command_m3 = ['commit', '-am', 'Code still not generated for the $mist -th time'];
+			  	var command_m3 = ['commit', '-am', 'phrasing commith for the $mist -th time'];
 			  	var command_m2 = ['push', 'origin', 'feature-$dome'];
 			  	var command_m1 = ['checkout', 'development'];
 			  	var command_m0 = ['merge', 'feature-$dome'];
@@ -122,6 +136,7 @@ static public function main():Void {
 					} 
 
 					static public function clientele(arxm:String, ?bptl:Array<String>, ?cyrr:Int) {
+							trace("Driving "+arxm+" @ "+bptl);
 							var process_4 = new sys.io.Process('$arxm', bptl);
 							trace("Warning: " + process_4.stdout.readAll().toString());
 							var commitHash_4 = process_4.stdout.readAll().toString();
