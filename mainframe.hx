@@ -10,24 +10,27 @@ static public function main():Void {
 	var qu1nt:String = './chronic.dt';
 	var qu2nt:String = './featuring.dt';
 	var qu4nt:String = './ohio.note';
-
+	var recta = true;
 	var preter:Array<String> = ['ssh-keyscan', '>>', '~/.ssh/known_hosts'];
 	var aeque:Array<String> = ['./llvm', 'https://github.com/llvm/llvm-project.git'];
 	var terrae:Array<String> = ['./flex', 'https://github.com/westes/flex.git'];	
 	var plaentrea:Array<String> =['./emcc', 'https://github.com/emscripten-core/emsdk.git'];
+	var excors = '../Data_of_data/data.c';
 	var kyno = '';
 
   	var chron = gitcoal(qu1nt, kyno);
-	yliy = preact(aeque[1], preter, yliy);
-	yliy = act_0(aeque[0], aeque[1], yliy, qu4nt);
-	yliy = preact(terrae[1], preter, yliy);
+	if ( recta ) {
+		//yliy = preact(aeque[1], preter, yliy);
+		//yliy = act_0(aeque[0], aeque[1], yliy, qu4nt);
+	}
 	//yliy = act_0(terrae[0], terrae[1], yliy, qu4nt);
-	yliy = preact(plaentrea[1], preter, yliy);
-
+	
 	var strud = gitcoal(qu2nt, kyno);
 	//yliy = act_1(plaentrea[0], plaentrea[1], yliy, qu4nt);
-	yliy = act_2(chron, strud, yliy, qu4nt);
-
+	if ( recta ) {
+		yliy = act_2(chron, strud, yliy, qu4nt);
+	}
+	mores(excors);
 }
 			static public function preact(lila:String, maya:Array<String>, ?eth:Int){
 				var Miu:Array<String> = [lila, maya[1], maya[2]];
@@ -161,7 +164,24 @@ static public function main():Void {
 					  	return mores;
 					}
 
-					
+					static public function mores(ether:String, ?est:String){
+						if (sys.FileSystem.exists(ether)){
+							var inter = sys.io.File.getContent(ether); 
+							
+							var undone = false, currun, curran;
+							while ( undone == false ){
+								curran = Std.int(Math.min(inter.indexOf(' '), inter.indexOf('\n')));
+								if ( curran >= 0 ) {
+									currun = inter.substr(0, curran);
+									trace("Error " + curran + " " + currun.length);
+									inter = inter.substr(currun.length + 1);
+									trace("Warning: " + currun);
+								} else {
+									undone = true;
+								}
+							}
+						}
+					}
 
 
 }
