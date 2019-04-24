@@ -10,6 +10,7 @@ static public function main():Void {
 	var qu1nt:String = './chronic.dt';
 	var qu2nt:String = './featuring.dt';
 	var qu4nt:String = './ohio.note';
+	var ly:String = './list1.yli';
 	var recta = true;
 	var preter:Array<String> = ['ssh-keyscan', '>>', '~/.ssh/known_hosts'];
 	var aeque:Array<String> = ['./llvm', 'https://github.com/llvm/llvm-project.git'];
@@ -30,7 +31,7 @@ static public function main():Void {
 	if ( recta ) {
 		yliy = act_2(chron, strud, yliy, qu4nt);
 	}
-	mores(excors);
+	mores(excors, ly);
 }
 			static public function preact(lila:String, maya:Array<String>, ?eth:Int){
 				var Miu:Array<String> = [lila, maya[1], maya[2]];
@@ -167,15 +168,28 @@ static public function main():Void {
 					static public function mores(ether:String, ?est:String){
 						if (sys.FileSystem.exists(ether)){
 							var inter = sys.io.File.getContent(ether); 
+							if (sys.FileSystem.exists(est)){
+								var syg:String = sys.io.File.getContent(est);
+								var sygm:Array<String> = syg.split('\n');
+								var hop:Int = 2;
+								var ry3g:String = "\\b(";
+								var ry4g:String =  ")\\b";
+								var ry1g:String = ry3g;
+								for (y in sygm ) { 
+									ry1g = ry1g + y + "|";
+								};
+								ry1g = ry1g + ry4g;
+								trace('Errror $ry1g');
+							}
 							
 							var undone = false, currun, curran;
 							while ( undone == false ){
 								curran = Std.int(Math.min(inter.indexOf(' '), inter.indexOf('\n')));
 								if ( curran >= 0 ) {
 									currun = inter.substr(0, curran);
-									trace("Error " + curran + " " + currun.length);
+									//trace("Error " + curran + " " + currun.length);
 									inter = inter.substr(currun.length + 1);
-									trace("Warning: " + currun);
+									//trace("Warning: " + currun);
 								} else {
 									undone = true;
 								}
