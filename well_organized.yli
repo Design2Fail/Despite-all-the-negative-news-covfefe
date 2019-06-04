@@ -1,0 +1,60 @@
+
+
+Mainframe 
+
+	( Modes: Input )
+
+	--> Create User Interface
+
+		--> Give Option to Select Input
+
+	--> Summon Ruby Daemon By Elements
+		
+		Write File Daemon.rby
+
+			For each Layer and each Element in Structure
+				Create "Ruby Line" corresponding to type of (position in) structure
+
+					// This includes object-level, array-level, value-level (or field-level) position
+					
+					And use current position of outer structure when within said outer struct
+				
+				After Create "Ruby Line" corresponding to termination of type of (position in) structure
+					for the object-level: } or ) or ]
+
+
+
+	--> Parse / Interpret Input
+
+	--> Store Interpretation in Metabase
+
+	--> Call Daemon on Interpretation
+
+	--> Run Artifact
+
+	--> Version tracking
+
+ --> 
+
+Paradigm & The Problem To Bypass ( -> Design Pattern )
+
+Design Pattern ( -> Structure & Style ) 
+
+Programming Syntactic Structure & Style ( -> Application Architecture )
+
+Application Architecture ( -> Platform independence / connectivity )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
