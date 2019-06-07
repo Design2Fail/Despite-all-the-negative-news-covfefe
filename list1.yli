@@ -6,9 +6,12 @@ comportement spécial
 
 compréhension particulière
 
-{}
-()
-[]
+{
+}
+(
+)
+[
+]
 <=
 ==
 >=
