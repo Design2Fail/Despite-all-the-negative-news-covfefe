@@ -13,7 +13,10 @@ Mainframe
 		Write File Daemon.rby
 
 			For each Layer and each Element in Structure
+
 				Create "Ruby Line" corresponding to type of (position in) structure
+
+					Array
 
 					// This includes object-level, array-level, value-level (or field-level) position
 					
